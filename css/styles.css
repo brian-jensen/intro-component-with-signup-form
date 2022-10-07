@@ -9,7 +9,10 @@
   padding: 0;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   border: none;
   box-shadow: none;
   outline: none;
@@ -27,7 +30,8 @@ a:active {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -39,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  
+
 }
 
 main {
@@ -58,7 +62,6 @@ main {
 .content h1 {
   font-size: 28px;
   line-height: 36px;
-  text-align: center;
   letter-spacing: -0.291667px;
 }
 
@@ -69,6 +72,9 @@ main {
 }
 
 .banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 88px;
   margin-bottom: 24px;
   padding: 18px 66px;
@@ -92,10 +98,6 @@ form {
   padding: 24px;
   background-color: var(--color-white);
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
-}
-
-form,
-input {
   border-radius: 10px;
 }
 
@@ -103,7 +105,7 @@ input {
   margin-bottom: 16px;
   padding: 15px 20px;
   border: 1px solid #DEDEDE;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 input,
@@ -135,6 +137,15 @@ button {
   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
   border-radius: 5px;
   color: var(--color-white);
+  cursor: pointer;
+}
+
+@media (hover:hover) {
+  button:hover {
+    background: #77E2B3;
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+    transition: background .3s ease-in;
+  }
 }
 
 form p {
@@ -148,4 +159,56 @@ form p {
 form p strong {
   font-weight: 700;
   color: #FF7979;
+}
+
+@media (min-width: 48em) {
+  main {
+    max-width: 64rem;
+    background: hsl(0, 100%, 74%) url(../images/bg-intro-desktop.png) no-repeat top center/cover;
+  }
+}
+
+@media (min-width: 90em) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 90rem;
+    padding: 0 165px;
+  }
+
+  .content {
+    flex-basis: 525px;
+    padding-top: 65px;
+  }
+
+  .content h1 {
+    margin-top: 0;
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -0.520833px;
+  }
+
+  .right-content {
+    flex-basis: 540px;
+  }
+
+  .banner {
+    height: 60px;
+  }
+
+  form {
+    padding: 40px;
+  }
+
+  input {
+    margin-bottom: 20px;
+    padding: 15px 32px;
+  }
+
+  form p {
+    text-align: center;
+  }
+
 }
