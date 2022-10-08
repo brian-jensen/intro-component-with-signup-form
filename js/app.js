@@ -20,6 +20,8 @@ const validate = input => {
   }
 }
 
+document.querySelector('.first-name').focus();
+
 form.addEventListener('submit', e => {
   e.preventDefault();
   inputs.forEach(input => {
